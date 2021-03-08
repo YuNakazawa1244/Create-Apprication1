@@ -1,5 +1,9 @@
 class BlogsController < ApplicationController
   def show
+<<<<<<< HEAD
+=======
+    @blog = Blog.find(params[:id])
+>>>>>>> origin/master
   end
 
   def index
@@ -9,8 +13,12 @@ class BlogsController < ApplicationController
   def create
     blog = Blog.new(blog_params)
     blog.save
+<<<<<<< HEAD
     redirect_to blogs_path
 
+=======
+    redirect_to blog_path(blog.id)
+>>>>>>> origin/master
   end
 
   def new
@@ -18,6 +26,7 @@ class BlogsController < ApplicationController
   end
 
   def edit
+<<<<<<< HEAD
     @blog　=　Blog.find(params[:id])
   end
 
@@ -31,6 +40,8 @@ class BlogsController < ApplicationController
     blog = Blog.find(params[:id])
     blog.update(blog_params)
     redirect_to blog_path(blog)
+=======
+>>>>>>> origin/master
   end
 
   private
@@ -39,3 +50,8 @@ class BlogsController < ApplicationController
   end
 
 end
+<<<<<<< HEAD
+=======
+
+###コミット名変更のため再度push###
+>>>>>>> origin/master
